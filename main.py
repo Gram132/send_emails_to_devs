@@ -24,13 +24,13 @@ def run_warmup():
     
     # Fetch emails from DB (replace with your method)
     
-    emails_to_send = [{"email":"abdellahgram13@outlook.com" , "username": "ahmed brahim"},
-                      {"email":"abdolahwidadi00@gmail.com" , "username":"mhmed brahim"},
-                      {"email":"abdellahgram02@outlook.com" , "username": "ahmed brahim"},
-                      {"email":"abdellahgram05@gmail.com" , "username": "ahmed brahim"},
-                      {"email":"abdellahgram07@gmail.com" , "username": "ahmed brahim"},
-                      {"email":"abdellahgram05@gmail.com" , "username": "ahmed brahim"},
-                      {"email":"tijobme01@gmail.com" , "username": "TI Jobme"}]
+    emails_to_send = [{"emails":["abdellahgram13@outlook.com"] , "username": "ahmed brahim"},
+                      {"emails":["abdolahwidadi00@gmail.com" ] , "username": "mhmed brahim"},
+                      {"emails":["abdellahgram02@outlook.com"] , "username": "ahmed brahim"},
+                      {"emails":["abdellahgram05@gmail.com"  ] , "username": "ahmed brahim"},
+                      {"emails":["abdellahgram07@gmail.com"  ] , "username": "ahmed brahim"},
+                      {"emails":["abdellahgram05@gmail.com"  ] , "username": "ahmed brahim"},
+                      {"emails":["tijobme01@gmail.com"       ] , "username": "TI Jobme"    }]
     
     developers_not_sent = get_developers_not_sent()
 
