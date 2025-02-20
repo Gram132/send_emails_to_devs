@@ -5,12 +5,11 @@ from utils import is_active_hour
 from db import get_db
 from get_sending_emails import get_developers_not_sent
 import os
+
 db = get_db()
 
 EMAIL_ACCOUNT = os.getenv("EMAIL_ACCOUNT")
 
-
-EMAIL_ACCOUNT = "abdellahgram01@gmail.com"
 
 def run_warmup():
     """ Runs the warm-up email automation process """
@@ -35,7 +34,7 @@ def run_warmup():
     
     developers_not_sent = get_developers_not_sent()
 
-    process_emails(EMAIL_ACCOUNT, developers_not_sent)
+    process_emails(EMAIL_ACCOUNT, emails_to_send)
 #
     # Update warm-up level
     update_warmup_level(EMAIL_ACCOUNT)
