@@ -85,5 +85,7 @@ def process_emails(email_account, emails_list):
         if success:
             emails_sent += 1
             db.update_one({"email_account": email_account}, {"$inc": {"emails_sent_today": 1}})
+            # Update is_sent to True for the email
+            db.update_one({"_id": email["_id"]}, {"$set": {"is_sent": True}})
 
     print(f"Sent {emails_sent} emails today.")
