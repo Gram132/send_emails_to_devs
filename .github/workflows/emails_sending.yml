@@ -1,7 +1,9 @@
 name: Send Mails
 
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * *"  # Runs every day at 7:00 AM GMT+1
+  workflow_dispatch:  # Allows manual execution
 
 jobs:
   scrape:
@@ -31,4 +33,3 @@ jobs:
         COLLECTION_NAME2: ${{ secrets.COLLECTION_NAME2 }}
         gmail_app_password: ${{ secrets.gmail_app_password }}
         gmail_account_email: ${{ secrets.gmail_account_email }}
-        

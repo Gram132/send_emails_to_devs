@@ -34,7 +34,7 @@ def run_warmup():
     
     developers_not_sent = get_developers_not_sent()
 
-    process_emails(EMAIL_ACCOUNT, emails_to_send)
+    process_emails(EMAIL_ACCOUNT, developers_not_sent)
 #
     # Update warm-up level
     update_warmup_level(EMAIL_ACCOUNT)
