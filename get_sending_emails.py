@@ -30,5 +30,5 @@ def get_developers_not_sent_in(country):
 
 emails_malaysia=get_developers_not_sent_in("Malaysia")
 for email in emails_malaysia:
-    print (email['emails'][0])
+    print (f"location : {email['location']} Email :{email['emails'][0]}")
 
