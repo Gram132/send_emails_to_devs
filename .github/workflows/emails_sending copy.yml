@@ -29,6 +29,7 @@ jobs:
         EMAIL_ACCOUNT: ${{ secrets.EMAIL_ACCOUNT }}
         MONGO_URI: ${{ secrets.MONGO_URI }}
         DB_NAME: ${{ secrets.DB_NAME }}
+        SEND_TO: "country"
         COLLECTION_NAME: ${{ secrets.COLLECTION_NAME }}
         COLLECTION_NAME2: ${{ secrets.COLLECTION_NAME2 }}
         gmail_app_password: ${{ secrets.gmail_app_password }}

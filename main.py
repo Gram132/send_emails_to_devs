@@ -3,13 +3,13 @@ from email_sender import process_emails
 from scheduler import random_delay
 from utils import is_active_hour
 from db import get_db
-from get_sending_emails import get_developers_not_sent
+from get_sending_emails import get_developers_not_sent , get_developers_not_sent_in
 import os
 
 db = get_db()
 
 EMAIL_ACCOUNT = os.getenv("EMAIL_ACCOUNT")
-
+SEND_TO =os.getenv("SEND_TO")
 
 def run_warmup():
     """ Runs the warm-up email automation process """
@@ -31,8 +31,10 @@ def run_warmup():
                       {"emails":["abdellahgram07@gmail.com"  ] , "username": "ahmed brahim"},
                       {"emails":["abdellahgram05@gmail.com"  ] , "username": "ahmed brahim"},
                       {"emails":["tijobme01@gmail.com"       ] , "username": "TI Jobme"    }]
-    
-    developers_not_sent = get_developers_not_sent()
+    if SEND_TO == "everybody":
+        developers_not_sent = get_developers_not_sent()
+    else:
+        developers_not_sent = get_developers_not_sent_in("Malaysia")
 
     process_emails(EMAIL_ACCOUNT, developers_not_sent)
 #
