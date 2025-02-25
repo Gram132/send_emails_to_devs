@@ -36,13 +36,16 @@ def run_warmup():
     else:
         developers_not_sent = get_developers_not_sent_in("Malaysia")
 
-    process_emails(EMAIL_ACCOUNT, developers_not_sent)
+    for email in developers_not_sent:
+        print(f"Location : {email['location']} Email : {email['emails'][0]}")
+
+    #process_emails(EMAIL_ACCOUNT, developers_not_sent)
 #
     # Update warm-up level
-    update_warmup_level(EMAIL_ACCOUNT)
+    #update_warmup_level(EMAIL_ACCOUNT)
 
     # Introduce a random delay
-    random_delay()
+    #random_delay()
 
 if __name__ == "__main__":
     run_warmup()
