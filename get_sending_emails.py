@@ -28,5 +28,7 @@ def get_developers_not_sent_in(country):
 
     return list(documents)
 
-get_developers_not_sent_in("Malaysia")
+emails_malaysia=get_developers_not_sent_in("Malaysia")
+for email in emails_malaysia:
+    print (email['emails'][0])
 
