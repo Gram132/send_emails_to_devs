@@ -1,4 +1,4 @@
-name: Send Mails
+name: Send Mails Copy
 
 on:
   schedule:
