@@ -8,8 +8,11 @@ COLLECTION_NAME = os.getenv("COLLECTION_NAME")
 COLLECTION_NAME2 = os.getenv("COLLECTION_NAME2")
 
 
-#gmail_app_password = "dyzx vbvr aaor oqyg"
-#gmail_account_email = "tijobme01@gmail.com"
+#gmail_app_password = "dyzx vbvr aaor oqyg"  
+#gmail_account_email = "tijobme01@gmail.com" 
+
+#gmail_app_password = "nryj gxtm mafo adam"  
+#gmail_account_email = "abdellahgram05@gmail.com"
 
 gmail_app_password = os.getenv("gmail_app_password")
 gmail_account_email = os.getenv("gmail_account_email")
