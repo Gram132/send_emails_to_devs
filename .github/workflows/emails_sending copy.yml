@@ -2,7 +2,7 @@ name: Send Mails Copy
 
 on:
   schedule:
-    - cron: "0 9 * * *"  # Runs every day at 9:00 AM GMT+1
+    - cron: "0 10 * * *"  # Runs every day at 9:00 AM GMT+1
   workflow_dispatch:  # Allows manual execution
 
 jobs:
@@ -32,5 +32,5 @@ jobs:
         SEND_TO: "country"
         COLLECTION_NAME: ${{ secrets.COLLECTION_NAME }}
         COLLECTION_NAME2: ${{ secrets.COLLECTION_NAME2 }}
-        gmail_app_password: ${{ secrets.gmail_app_password }}
-        gmail_account_email: ${{ secrets.gmail_account_email }}
+        gmail_app_password: ${{ secrets.GMAIL_APP_PASSWORD_TI }}
+        gmail_account_email: ${{ secrets.GMAIL_ACCOUNT_EMAIL_TI }}
