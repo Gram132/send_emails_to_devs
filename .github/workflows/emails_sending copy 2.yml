@@ -2,7 +2,7 @@ name: Send Mails 05
 
 on:
   schedule:
-    - cron: "0 12 * * *"  # Runs every day at 10:00 AM GMT
+    - cron: "0 3 * * *"  # Runs every day at 10:00 AM GMT
   workflow_dispatch:  # Allows manual execution
 
 jobs:
