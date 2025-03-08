@@ -3,7 +3,7 @@ from email_sender import process_emails
 from scheduler import random_delay
 from utils import is_active_hour
 from db import get_db
-from get_sending_emails import get_developers_not_sent , get_developers_not_sent_in
+from get_sending_emails import get_developers_except_in , get_developers_not_sent_in
 import os
 
 db = get_db()
@@ -32,7 +32,8 @@ def run_warmup():
                       {"emails":["abdellahgram05@gmail.com"  ] , "username": "ahmed brahim"},
                       {"emails":["tijobme01@gmail.com"       ] , "username": "TI Jobme"    }]
     if SEND_TO == "everybody":
-        developers_not_sent = get_developers_not_sent()
+        developers_not_sent = get_developers_except_in("Malaysia")
+
     else:
         developers_not_sent = get_developers_not_sent_in("Malaysia")
 
