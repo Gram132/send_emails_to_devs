@@ -1,9 +1,6 @@
 name: Send Mails TI
 
 on:
-  schedule:
-    - cron: "0 1 * * *"  # Runs every day at 10:00 AM GMT
-  workflow_dispatch:  # Allows manual execution
 
 jobs:
   scrape:
